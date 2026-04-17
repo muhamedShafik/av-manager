@@ -112,51 +112,48 @@ Reach out to the lead before making assumptions. A 2-minute chat saves hours of 
 
 av-manager/
 │
-├── client/                          # React + TypeScript (Vite)
-│   └── src/
-│       ├── assets/                  # Images, icons, fonts
-│       ├── components/              # Reusable UI components
-│       │   ├── ui/                  # Generic components (Button, Modal, Table)
-│       │   ├── inventory/           # Inventory specific components
-│       │   ├── events/              # Events specific components
-│       │   └── workforce/           # Workforce specific components
-│       ├── pages/                   # One folder per module
-│       │   ├── inventory/
-│       │   ├── events/
-│       │   └── workforce/
-│       ├── hooks/                   # Custom React hooks
-│       ├── services/                # API call functions (axios)
-│       ├── store/                   # Global state management
-│       ├── types/                   # Shared TypeScript interfaces
-│       └── utils/                   # Frontend helper functions
+├── client/ # React + TypeScript (Vite)
+│ └── src/
+│ ├── assets/ # Images, icons, fonts
+│ ├── components/
+│ │ ├── ui/ # Generic: Button, Modal, Table
+│ │ ├── inventory/
+│ │ ├── events/
+│ │ └── workforce/
+│ ├── pages/
+│ │ ├── inventory/
+│ │ ├── events/
+│ │ └── workforce/
+│ ├── hooks/ # Custom React hooks
+│ ├── services/ # Axios API calls
+│ ├── store/ # Global state
+│ ├── types/ # TypeScript interfaces
+│ └── utils/ # Helper functions
 │
-├── server/                          # Node.js + Express + TypeScript
-│   ├── prisma/
-│   │   └── schema.prisma            # Database schema (single source of truth)
-│   └── src/
-│       ├── index.ts                 # Entry point — mounts all route prefixes
-│       ├── modules/                 # One folder per feature module
-│       │   ├── inventory/
-│       │   │   ├── inventory.routes.ts      # Route definitions only
-│       │   │   ├── inventory.controller.ts  # Handles req/res only, no logic
-│       │   │   ├── inventory.service.ts     # All business logic lives here
-│       │   │   └── inventory.middleware.ts  # Joi/Zod validation schema
-│       │   ├── events/
-│       │   │   ├── events.routes.ts
-│       │   │   ├── events.controller.ts
-│       │   │   ├── events.service.ts
-│       │   │   └── events.middleware.ts
-│       │   └── workforce/
-│       │       ├── workforce.routes.ts
-│       │       ├── workforce.controller.ts
-│       │       ├── workforce.service.ts
-│       │       └── workforce.middleware.ts
-│       ├── config/                  # Supabase client, env config, DB connection
-│       └── utils/                   # Shared helpers (apiResponse.ts etc.)
-│
-├── .gitignore
-├── README.md
-└── CONTRIBUTING.md
+└── server/ # Node.js + Express + TypeScript
+├── prisma/
+│ └── schema.prisma # Database schema
+└── src/
+├── index.ts # Entry point
+├── modules/
+│ ├── inventory/
+│ │ ├── inventory.routes.ts
+│ │ ├── inventory.controller.ts
+│ │ ├── inventory.service.ts
+│ │ └── inventory.middleware.ts
+│ ├── events/
+│ │ ├── events.routes.ts
+│ │ ├── events.controller.ts
+│ │ ├── events.service.ts
+│ │ └── events.middleware.ts
+│ └── workforce/
+│ ├── workforce.routes.ts
+│ ├── workforce.controller.ts
+│ ├── workforce.service.ts
+│ └── workforce.middleware.ts
+├── config/ # Supabase client, env config
+└── utils/ # Shared helpers
+
 
 
 ## Folder Rules
